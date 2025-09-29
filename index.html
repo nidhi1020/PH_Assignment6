@@ -52,9 +52,9 @@
 
     <div class="container mb-12 mx-auto px-6 lg:px-20 flex flex-col lg:flex-row gap-10">
         <!-- sidebar starts -->
-        <aside class="w-full  lg:w-1/5">
+        <aside class="w-full lg:w-1/5">
             <h3 class="text-2xl font-bold mb-8 ">Categories</h3>
-            <ul class="space-y-4 font-medium ">
+            <ul id="categoryList" class="space-y-4 font-medium ">
                 <li>All trees</li>
                 <li>Fruit Trees</li>
                 <li>Flowering Trees</li>
@@ -75,7 +75,7 @@
         <!-- 6 cards -->
         <div class="w-full lg:w-3/5 ">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 ">
+            <div id="treeCards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 ">
 
                 <!-- card-1 -->
                 <div class="bg-white shadow-md flex flex-col items-center text-center p-3">
@@ -159,7 +159,9 @@
 
         <aside class="w-full lg:w-1/5 bg-white shadow-sm rounded-xl p-6">
             <h2 class="font-bold text-2xl">Your Cart</h2>
-            <ul></ul>
+            <ul id="cartList" class="space-y-3">
+                <p class="font font-semibold mt-4">Total: ৳<span id="totalPrice">0</span></p>
+            </ul>
 
         </aside>
 
@@ -231,6 +233,22 @@
     </section> 
     <!-- forms ends -->
 
+    <!-- <div id="plantModal" class=" hidden fixed inset-0 bg-black bg-opacity-50 justify-center items-center">
+        <div  class=" bg-white p-6 rounded-lg max-w-lg w-full relative">
+            <button onclick="closeModal()" class="absolute top-2 right-2 font-bold">X</button>
+            <div class="" id="modalContent">         
+            </div>
+        </div>
+    </div> -->
+
+<div id="plantModal" class="hidden fixed inset-0 bg-black bg-opacity-50 justify-center items-center">
+    <div class="bg-white p-6 rounded-lg max-w-lg w-full relative">
+        <button onclick="closeModal()" class="absolute top-2 right-2 font-bold">X</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+
 </main>
 
 <!-- footer -->
@@ -238,6 +256,9 @@
     <h2>© 2025 Green Earth. All Rights Reserved.  </h2>
 </footer>
 
+<script src="./index.js">
+
+</script>
 
 </body>
 </html>
